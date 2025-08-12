@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, Phone, Mail } from "lucide-react";
-import { NAV_ITEMS, WHATSAPP_NUMBER, CONTACT_EMAIL } from "@/lib/constants";
+import { Menu } from "lucide-react";
+import { NAV_ITEMS } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
+import Socials from "@/components/site/Socials";
 import {
   Sheet,
   SheetContent,
@@ -15,9 +16,9 @@ import {
 export default function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/50">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <Link href="/" className="text-lg font-semibold text-primary">
+        <Link href="/" className="rounded-xl bg-white/60 px-3 py-1 text-lg font-semibold text-primary shadow-sm backdrop-blur">
           Çevirmen
         </Link>
         <nav className="hidden gap-6 md:flex">
@@ -25,27 +26,14 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-gray-700 hover:text-primary"
+              className="group relative text-sm text-gray-700 transition hover:text-primary"
             >
               {item.label}
+              <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
         </nav>
-        <div className="hidden items-center gap-2 md:flex">
-          <Button asChild variant="secondary">
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER.replace(/[^\d]/g, "")}`}
-              aria-label="WhatsApp ile iletişime geç"
-            >
-              <Phone className="mr-2 h-4 w-4" /> WhatsApp
-            </a>
-          </Button>
-          <Button asChild>
-            <a href={`mailto:${CONTACT_EMAIL}`} aria-label="E-posta gönder">
-              <Mail className="mr-2 h-4 w-4" /> E-posta
-            </a>
-          </Button>
-        </div>
+        <Socials className="hidden md:flex" />
 
         <div className="md:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
@@ -69,21 +57,7 @@ export default function Header() {
                     {item.label}
                   </Link>
                 ))}
-                <div className="mt-2 flex gap-2">
-                  <Button asChild variant="secondary" className="flex-1">
-                    <a
-                      href={`https://wa.me/${WHATSAPP_NUMBER.replace(/[^\d]/g, "")}`}
-                      aria-label="WhatsApp ile iletişime geç"
-                    >
-                      <Phone className="mr-2 h-4 w-4" /> WhatsApp
-                    </a>
-                  </Button>
-                  <Button asChild className="flex-1">
-                    <a href={`mailto:${CONTACT_EMAIL}`} aria-label="E-posta gönder">
-                      <Mail className="mr-2 h-4 w-4" /> E-posta
-                    </a>
-                  </Button>
-                </div>
+                <Socials className="mt-4" />
               </div>
             </SheetContent>
           </Sheet>

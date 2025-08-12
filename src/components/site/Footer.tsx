@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { Mail, Phone, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { CONTACT_EMAIL, WHATSAPP_NUMBER } from "@/lib/constants";
+import Socials from "@/components/site/Socials";
 
 export default function Footer() {
   return (
@@ -31,14 +32,7 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="text-base font-semibold">Sosyal</h3>
-            <div className="mt-2 flex gap-3 text-muted-foreground">
-              <Link href="#" aria-label="LinkedIn">
-                <Linkedin className="h-5 w-5 hover:text-primary" />
-              </Link>
-              <Link href="#" aria-label="Instagram">
-                <Instagram className="h-5 w-5 hover:text-primary" />
-              </Link>
-            </div>
+            <Socials className="mt-2 text-muted-foreground" />
           </div>
         </div>
         <div className="mt-8 text-center text-xs text-muted-foreground">

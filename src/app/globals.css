@@ -52,9 +52,9 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #1E40AF; /* mavi */
+  --primary: #10B981; /* emerald */
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: #10B981; /* yeşil */
+  --secondary: #1E40AF; /* mavi (ikinci renk) */
   --secondary-foreground: oklch(0.205 0 0);
   --muted: #F3F4F6; /* açık gri */
   --muted-foreground: #6B7280; /* gri metin */
@@ -63,7 +63,7 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: #E5E7EB;
   --input: #E5E7EB;
-  --ring: #93C5FD; /* açık mavi */
+  --ring: #6EE7B7; /* açık yeşil */
   --chart-1: #1E40AF;
   --chart-2: #10B981;
   --chart-3: #6B7280;
@@ -121,3 +121,128 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Mikey tasarımı için yardımcı sınıflar */
+@layer utilities {
+  .vertical-rl { writing-mode: vertical-rl; text-orientation: mixed; }
+}
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background: var(--primary);
+  transition: width 200ms ease;
+}
+.link-underline:hover::after { width: 100%; }
+
+
+/* Landing: marquee ve dekoratif bloblar */
+@keyframes marquee-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee { mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); overflow: hidden; }
+.marquee-track { display: flex; width: max-content; animation: marquee-left 28s linear infinite; }
+.blob { position: absolute; filter: blur(70px); opacity: .3; pointer-events: none; }
+.blob.blue { background: radial-gradient(600px 400px at center, #60A5FA55, transparent 60%); }
+.blob.green { background: radial-gradient(600px 400px at center, #34D39955, transparent 60%); }
+
+/* Fancy card styles */
+/* Text scroller styles */
+.text-scroller { background: transparent; }
+.text-scroller-track {
+  display: flex; flex-direction: column; gap: 42px;
+  animation: scrollY 12s linear infinite;
+}
+@keyframes scrollY {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.text-scroller-persp .ts-item { font-size: 42px; color: #0f172a; }
+.text-scroller-persp { perspective: 800px; }
+.text-scroller-persp .text-scroller-track { transform: rotateX(12deg) translateZ(0); transform-origin: top center; }
+
+/* Oval mask (no border/background) */
+.text-scroller-oval { position: relative; }
+.text-scroller-oval::before {
+  content: ""; position: absolute; inset: 0; border-radius: 60% / 40%;
+  box-shadow: 0 8px 40px rgba(15,23,42,0.08);
+  pointer-events: none; /* sadece gölge */
+}
+.text-scroller-oval { -webkit-mask-image: radial-gradient(120% 80% at 50% 50%, #000 60%, transparent 61%); mask-image: radial-gradient(120% 80% at 50% 50%, #000 60%, transparent 61%); }
+
+/* morph keyframes moved from component */
+@keyframes morph {
+  0% { border-radius: 46% 54% 45% 55% / 55% 44% 56% 45%; }
+  50% { border-radius: 60% 40% 65% 35% / 35% 65% 35% 65%; }
+  100% { border-radius: 46% 54% 45% 55% / 55% 44% 56% 45%; }
+}
+.glass-card {
+  position: relative;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.05);
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(16,185,129,.45), rgba(30,64,175,.35));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+.gradient-border:hover::before { opacity: 1; }
+
+/* New card decorations */
+.card-grid { position: relative; }
+.card-grid::after {
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(17,24,39,0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17,24,39,0.07) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: right top; /* sağdan başlasın */
+  pointer-events: none;
+  /* sağdan ortaya doğru lineer kaybolma */
+  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,.6) 25%, rgba(0,0,0,.25) 45%, rgba(0,0,0,0) 65%);
+  mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,.6) 25%, rgba(0,0,0,.25) 45%, rgba(0,0,0,0) 65%);
+}
+
+.card-blur-border { position: relative; }
+.card-blur-border::before {
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: 16px;
+  border: 1px solid rgba(16,185,129,.10);
+  filter: blur(3px);
+  pointer-events: none;
+}
+
+/* Hero-only subtle gradient background */
+.hero-grad { position: relative; isolation: isolate; }
+.hero-grad::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* tam kenarlardan başla */
+  background:
+    radial-gradient(1200px 800px at 5% 0%, rgba(16,185,129,0.10), transparent 60%),
+    radial-gradient(1100px 700px at 95% 10%, rgba(30,64,175,0.06), transparent 70%);
+  filter: blur(18px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* old page-bg removed; gradients now hero-only */

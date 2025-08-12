@@ -1,40 +1,17 @@
-import ContactForm from "@/components/forms/ContactForm";
-import { Mail, Phone } from "lucide-react";
-import { CONTACT_EMAIL, WHATSAPP_NUMBER } from "@/lib/constants";
+export const metadata = { title: "Contact" };
 
-export const metadata = {
-  title: "İletişim",
-  description: "İletişim formu, telefon ve e-posta",
-};
-
-export default function ContactPage() {
+export default function ContactOnlyPage() {
   return (
-    <div className="mx-auto max-w-4xl px-4 py-12">
-      <h1 className="text-2xl font-semibold">İletişim</h1>
-      <div className="mt-8 grid gap-8 md:grid-cols-2">
-        <div>
-          <ContactForm />
-        </div>
-        <div className="space-y-4 rounded-lg border p-6">
-          <div className="flex items-center gap-2">
-            <Mail className="h-5 w-5" />
-            <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
-          </div>
-          <div className="flex items-center gap-2">
-            <Phone className="h-5 w-5" />
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER.replace(/[^\d]/g, "")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {WHATSAPP_NUMBER}
-            </a>
-          </div>
-          <p className="text-sm text-muted-foreground">
-            Mesajınızı ilettikten sonra en kısa sürede dönüş yapacağım.
-          </p>
-        </div>
-      </div>
+    <div className="mx-auto max-w-[900px] px-6 py-16">
+      <h1 className="text-3xl font-bold" style={{fontFamily:'var(--font-display)'}}>Let’s Talk</h1>
+      <p className="mt-2 text-gray-600">Share your project details and I’ll get back to you quickly.</p>
+
+      <form action={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'hello@example.com'}`} className="mt-8 grid gap-4">
+        <input className="rounded-lg border px-4 py-3" placeholder="Your name" required />
+        <input className="rounded-lg border px-4 py-3" placeholder="Your email" type="email" required />
+        <textarea className="min-h-[160px] rounded-lg border px-4 py-3" placeholder="Message" required />
+        <button className="rounded-lg bg-primary px-5 py-3 text-white">Send</button>
+      </form>
     </div>
   );
 }

@@ -6,7 +6,13 @@ import html from "remark-html";
 
 const BLOG_DIR = path.join(process.cwd(), "src", "content", "blog");
 
-export async function getAllPosts() {
+export type BlogFrontmatter = {
+  title: string;
+  date?: string;
+  excerpt?: string;
+};
+
+export async function getAllPosts(): Promise<Array<{ slug: string; data: BlogFrontmatter }>> {
   try {
     const files = await fs.readdir(BLOG_DIR);
     const posts = await Promise.all(
@@ -17,23 +23,24 @@ export async function getAllPosts() {
           const fullPath = path.join(BLOG_DIR, filename);
           const file = await fs.readFile(fullPath, "utf8");
           const { data } = matter(file);
-          return { slug, data } as { slug: string; data: any };
+          const frontmatter = data as BlogFrontmatter;
+          return { slug, data: frontmatter };
         })
     );
-    return posts.sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
+    return posts.sort((a, b) => (String(a.data.date) < String(b.data.date) ? 1 : -1));
   } catch {
-    return [] as Array<{ slug: string; data: any }>;
+    return [];
   }
 }
 
-export async function getPostBySlug(slug: string) {
+export async function getPostBySlug(slug: string): Promise<{ data: BlogFrontmatter; html: string } | null> {
   try {
     const fullPath = path.join(BLOG_DIR, `${slug}.md`);
     const file = await fs.readFile(fullPath, "utf8");
     const { data, content } = matter(file);
     const processed = await remark().use(html).process(content);
     const contentHtml = processed.toString();
-    return { data, html: contentHtml } as { data: any; html: string };
+    return { data: data as BlogFrontmatter, html: contentHtml };
   } catch {
     return null;
   }
