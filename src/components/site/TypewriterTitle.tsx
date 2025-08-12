@@ -20,6 +20,21 @@ export default function TypewriterTitle({
   const [wordIdx, setWordIdx] = useState(0);
   const [phase, setPhase] = useState<"typing" | "pausing" | "deleting">("typing");
   const maxLen = Math.max(...words.map((w) => w.length));
+  const [reserveCh, setReserveCh] = useState<number | null>(null);
+
+  // Reserve width only on md and above to avoid mobile overflow
+  useEffect(() => {
+    const calc = () => {
+      if (typeof window !== "undefined" && window.innerWidth >= 768) {
+        setReserveCh(maxLen + 1);
+      } else {
+        setReserveCh(null);
+      }
+    };
+    calc();
+    window.addEventListener("resize", calc);
+    return () => window.removeEventListener("resize", calc);
+  }, [maxLen]);
 
   useEffect(() => {
     const current = words[wordIdx % words.length];
@@ -51,11 +66,11 @@ export default function TypewriterTitle({
 
   return (
     <h1
-      className="text-4xl font-black leading-tight md:text-6xl"
+      className="break-words text-4xl font-black leading-tight md:text-6xl"
       style={{ fontFamily: "var(--font-display)" }}
     >
       {base} 
-      <span className="relative inline-block align-middle" style={{ minWidth: `${maxLen + 1}ch` }}>
+      <span className="relative inline-block align-middle md:align-baseline" style={reserveCh ? { minWidth: `${reserveCh}ch` } : undefined}>
         <span className="text-primary">{typed}</span>
         <span className="ml-0.5 inline-block h-[1em] w-[2px] translate-y-[2px] animate-pulse bg-primary align-middle" />
       </span>

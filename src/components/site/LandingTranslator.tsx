@@ -39,7 +39,7 @@ export default function LandingTranslator() {
       </div>
 
       {/* Hero */}
-      <section id="home" className="hero-grad grid min-h-[70vh] items-center gap-10 px-8 pb-14 pt-4 md:grid-cols-2 md:pb-20 md:pt-10">
+      <section id="home" className="hero-grad grid min-h-[70vh] items-center gap-6 px-4 pb-10 pt-4 md:grid-cols-2 md:gap-10 md:px-8 md:pb-20 md:pt-10">
         <div>
           <TypewriterTitle />
           <p className="mt-3 max-w-2xl text-gray-700">Professional Translation Services for Technical, Academic, and Commercial Needs. Based in {LOCATION}.</p>
