@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { CONTACT_EMAIL, WHATSAPP_NUMBER } from "@/lib/constants";
 import Socials from "@/components/site/Socials";

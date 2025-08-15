@@ -4,8 +4,17 @@ import Logo from "@/components/site/Logo";
 import { getDictionary } from "@/i18n/get-dictionary";
 import type { Locale } from "@/i18n/locales";
 
+interface Dictionary {
+  footer: {
+    privacy: string;
+    terms: string;
+    rights: string;
+  };
+  [key: string]: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+}
+
 export default function FooterBar({ lang = "tr" }: { lang?: Locale }) {
-  const [t, setT] = useState<Record<string, any> | null>(null);
+  const [t, setT] = useState<Dictionary | null>(null);
 
   useEffect(() => {
     getDictionary(lang).then(setT);

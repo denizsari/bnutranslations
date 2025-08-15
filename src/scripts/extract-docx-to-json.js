@@ -2,6 +2,8 @@
 // Gerekli paketler: mammoth, fs
 // Kurulum: npm install mammoth fs
 
+/* eslint-disable @typescript-eslint/no-require-imports */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 const mammoth = require("mammoth");
 const fs = require("fs");
 const path = require("path");

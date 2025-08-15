@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import Link from "next/link";
 import Socials from "@/components/site/Socials";
 import Logo from "@/components/site/Logo";
 import CVPreviewButton from "@/components/site/CVPreviewButton";
@@ -9,12 +9,25 @@ import DocumentTypes from "@/components/site/DocumentTypes";
 import FooterBar from "@/components/site/FooterBar";
 import ProcessStrip from "@/components/site/ProcessStrip";
 import { useEffect, useMemo, useState } from "react";
-import { LOCATION, HERO_TITLE_TR, HERO_DESC_TR, HERO_CONF_TR, HERO_DESC_RU, HERO_CONF_RU } from "@/lib/constants";
+import { HERO_TITLE_TR, HERO_DESC_TR, HERO_CONF_TR, HERO_DESC_RU, HERO_CONF_RU } from "@/lib/constants";
 import { getDictionary } from "@/i18n/get-dictionary";
 import type { Locale } from "@/i18n/locales";
 // 3D artık arkaplanda, sağ taraftaki kutu kaldırıldı
 
-export default function LandingTranslator() {
+interface Dictionary {
+  nav: { home: string; services: string; credentials: string; contact: string };
+  cta: { contact: string; showCv: string };
+  hero: { title: string; desc: string; conf: string };
+  services: { notarialProcess: string; documentTypes: string };
+  credentials: {
+    title: string;
+    certifications: { title: string; items: string[] };
+    education: { title: string; items: string[] };
+  };
+  [key: string]: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+}
+
+export default function LandingTranslator({ initialLang = "tr" }: { initialLang?: Locale }) {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -23,8 +36,8 @@ export default function LandingTranslator() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const [lang, setLang] = useState<Locale>("tr");
-  const [t, setT] = useState<Record<string, any> | null>(null);
+  const [lang, setLang] = useState<Locale>(initialLang);
+  const [t, setT] = useState<Dictionary | null>(null);
   useEffect(() => {
     getDictionary(lang).then(setT);
   }, [lang]);
@@ -70,13 +83,13 @@ export default function LandingTranslator() {
           <p className="mt-4 max-w-2xl text-base text-gray-700 md:text-lg">{t?.hero?.desc ?? hero.desc}</p>
           <p className="mt-2 text-sm font-medium text-gray-600">{t?.hero?.conf ?? hero.conf}</p>
           <div className="mt-6 flex gap-3">
-            <a href="/contact" className="group inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:translate-y-[-1px] hover:shadow-md">
+            <Link href="/contact" className="group inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:translate-y-[-1px] hover:shadow-md">
               <span className="i-contact relative inline-block">
                 <span className="absolute -left-3 top-1/2 hidden h-1 w-3 -translate-y-1/2 rounded bg-white/80 group-hover:block" />
               </span>
               <Mail className="h-4 w-4" />
               {t?.cta?.contact ?? 'Contact'}
-            </a>
+            </Link>
             <CVPreviewButton label={t?.cta?.showCv} />
           </div>
           <ul className="mt-6 flex flex-wrap gap-2 text-sm text-gray-700">

@@ -7,8 +7,18 @@ import type { Locale } from "@/i18n/locales";
 const stepIcons = [ClipboardList, Plane, FileCheck, Send];
 const stepKeys = ['brief', 'quote', 'translate', 'deliver'];
 
+interface Dictionary {
+  process: {
+    [key: string]: {
+      title: string;
+      desc: string;
+    };
+  };
+  [key: string]: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+}
+
 export default function ProcessStrip({ lang = "tr" }: { lang?: Locale }) {
-  const [t, setT] = useState<Record<string, any> | null>(null);
+  const [t, setT] = useState<Dictionary | null>(null);
 
   useEffect(() => {
     getDictionary(lang).then(setT);
