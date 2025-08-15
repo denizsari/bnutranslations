@@ -1,0 +1,156 @@
+{
+  "file": "Yeni Microsoft Word Belgesi.docx",
+  "notarialProcess": {
+    "ru": {
+      "title": "Процесс нотариального заверения",
+      "steps": [
+        "Передача документа и его анализ",
+        "Согласование стоимости и сроков",
+        "Процесс перевода",
+        "Нотариальное заверение",
+        "Передача документа"
+      ]
+    },
+    "tr": {
+      "title": "Noter Tasdik Süreci",
+      "steps": [
+        "Belge teslimi ve inceleme",
+        "Fiyat ve zamanlama üzerinde anlaşma",
+        "Tercüme süreci",
+        "Noter onayı",
+        "Belgenin teslim edilmesi"
+      ]
+    }
+  },
+  "documentTypes": {
+    "ru": {
+      "personal": {
+        "title": "Личные документы",
+        "items": [
+          "Паспорт",
+          "Свидетельства о рождении",
+          "Свидетельства о браке",
+          "Свидетельства о разводе",
+          "Свидетельства о смерти",
+          "Водительское удостоверение"
+        ]
+      },
+      "education": {
+        "title": "Образовательные документы",
+        "items": [
+          "Дипломы об образовании",
+          "Аттестаты об образовании",
+          "Сертификаты о профессиональной квалификации"
+        ]
+      },
+      "work": {
+        "title": "Трудовые и финансовые документы",
+        "items": [
+          "Трудовые книжки и справки о трудовом стаже",
+          "Налоговые декларации и справки о доходах",
+          "ЕГРН-ЕГРЮЛ"
+        ]
+      },
+      "legal": {
+        "title": "Юридические документы",
+        "items": [
+          "Доверенности",
+          "Судебные решения и решения органов власти",
+          "Контракты, соглашения и другие юридические документы"
+        ]
+      },
+      "property": {
+        "title": "Документы о собственности",
+        "items": [
+          "Свидетельства о праве собственности на недвижимость",
+          "Транспортные документы"
+        ]
+      },
+      "medical": {
+        "title": "Медицинские документы",
+        "items": [
+          "Медицинские справки",
+          "Справка Формул- A / Б"
+        ]
+      },
+      "inheritance": {
+        "title": "Завещания и наследственные документы",
+        "items": [
+          "Завещания",
+          "Нотариальные акты и документы, связанные с наследством"
+        ]
+      },
+      "financial": {
+        "title": "Финансовые документы",
+        "items": [
+          "Банковские выписки, документы о финансовых обязательствах",
+          "Счет-фактуры"
+        ]
+      }
+    },
+    "tr": {
+      "personal": {
+        "title": "Kişisel belgeler",
+        "items": [
+          "Pasaport",
+          "Doğum belgesi",
+          "Evlilik belgesi",
+          "Boşanma belgesi",
+          "Ölüm belgesi",
+          "Sürücü belgesi"
+        ]
+      },
+      "education": {
+        "title": "Eğitim belgeleri",
+        "items": [
+          "Eğitim Diplomaları",
+          "Eğitim Sertifikası",
+          "Mesleki yeterlilik sertifikaları"
+        ]
+      },
+      "work": {
+        "title": "Çalışma ve mali belgeler",
+        "items": [
+          "Çalışma kayıtları ve iş deneyimi belgeleri",
+          "Vergi beyannameleri ve gelir belgeleri"
+        ]
+      },
+      "legal": {
+        "title": "Hukuki Belgeler",
+        "items": [
+          "Vekaletname",
+          "Mahkeme kararları ve diğer yargı belgeleri",
+          "Sözleşmeler, anlaşmalar ve diğer hukuki belgeler"
+        ]
+      },
+      "property": {
+        "title": "Mülkiyet belgeleri",
+        "items": [
+          "Gayrimenkul tapu senetleri",
+          "Taşıma belgeleri"
+        ]
+      },
+      "medical": {
+        "title": "Tıbbi belgeler",
+        "items": [
+          "Tıbbi sertifikalar",
+          "Formül- A / Б"
+        ]
+      },
+      "inheritance": {
+        "title": "Vasiyetnameler ve miras belgeleri",
+        "items": [
+          "Vasiyetname",
+          "Mirasla ilgili noter tutanakları ve belgeleri"
+        ]
+      },
+      "financial": {
+        "title": "Mali evraklar",
+        "items": [
+          "Banka ekstreleri, mali yükümlülüklere dair belgeler",
+          "Faturalar"
+        ]
+      }
+    }
+  }
+}

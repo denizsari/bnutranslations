@@ -1,0 +1,53 @@
+{
+  "nav": { "home": "Anasayfa", "services": "Hizmetler", "credentials": "Yetkinlikler", "contact": "İletişim" },
+  "cta": { "contact": "İletişim", "showCv": "CV'yi Göster" },
+  "hero": {
+    "title": "BNU Tercüme. Sizin için çalışan çeviri.",
+    "desc": "BNU Tercüme — vize–ikamet, çalışma izni, adli ve kurumsal işlemler için güvenilir çeviri ortağınız. Başvurudan hazır belgeye: çeviri, redaksiyon, terim kontrolü ve son kalite denetimi. Gizlilik, doğruluk ve net teslim tarihleri — güvencemizdir. Her adımda kişisel uzman desteği.",
+    "conf": "Noterliklerle çalışma tecrübesi • Akkuyu NGS saha deneyimi • 7/24 destek"
+  },
+  "process": {
+    "brief": {
+      "title": "Bilgilendirme",
+      "desc": "Kapsam, dosyalar ve son tarih"
+    },
+    "quote": {
+      "title": "Fiyat Teklifi", 
+      "desc": "Şeffaf fiyatlandırma ve tahmini süre"
+    },
+    "translate": {
+      "title": "Çeviri",
+      "desc": "Terminoloji ve kalite kontrol incelemesi"
+    },
+    "deliver": {
+      "title": "Teslim",
+      "desc": "Zamanında teslim"
+    }
+  },
+  "services": {
+    "notarialProcess": "Noter Tasdik Süreci",
+    "documentTypes": "Belge Türleri"
+  },
+  "credentials": {
+    "title": "Sertifikalar ve Eğitim",
+    "certifications": {
+      "title": "Sertifikalar",
+      "items": [
+        "ATA Sertifikalı Çevirmen (EN↔TR)",
+        "SDL/Trados İleri Seviye",
+        "ISO 17100: Çeviri Hizmetleri"
+      ]
+    },
+    "education": {
+      "title": "Eğitim",
+      "items": [
+        "Çevirmenlik ve Sözlü Çeviri Lisans",
+        "Dilbilim Yüksek Lisans (devam ediyor)",
+        "Devam eden: Hukuki ve Teknik terminoloji atölyeleri"
+      ]
+    }
+  },
+  "footer": { "privacy": "Gizlilik", "terms": "Koşullar", "rights": "Tüm hakları saklıdır." }
+}
+
+

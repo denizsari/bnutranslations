@@ -1,4 +1,4 @@
-export const SITE_TITLE = "Profesyonel Çeviri Hizmetleri";
+export const SITE_TITLE = "BNU Tercüme | Profesyonel Çeviri";
 export const SITE_NAME = "bnutranslations";
 export const DISPLAY_NAME = process.env.NEXT_PUBLIC_DISPLAY_NAME || "Mikey";
 export const LOCATION = process.env.NEXT_PUBLIC_LOCATION || "İstanbul, Türkiye";
@@ -22,5 +22,19 @@ export const NAV_ITEMS = [
   { href: "/contact", label: "İletişim" },
   { href: "/blog", label: "Blog" },
 ] as const;
+
+
+// Hero kopyaları (TR/RU)
+export const HERO_TITLE_TR =
+  "BNU Tercüme. Sizin için çalışan çeviri.";
+export const HERO_DESC_TR =
+  "BNU Tercüme — vize–ikamet, çalışma izni, adli ve kurumsal işlemler için güvenilir çeviri ortağınız. Başvurudan hazır belgeye: çeviri, redaksiyon, terim kontrolü ve son kalite denetimi. Gizlilik, doğruluk ve net teslim tarihleri — güvencemizdir. Her adımda kişisel uzman desteği.";
+export const HERO_CONF_TR =
+  "Noterliklerle çalışma tecrübesi • Akkuyu NGS saha deneyimi • 7/24 destek";
+
+export const HERO_DESC_RU =
+  "«BNU Tercüme» — надёжный партнёр по переводам для виз, ВНЖ, РНР, судебных и корпоративных дел. От заявки до готового документа: перевод, редактура, терминологическая сверка и финальный контроль качества. Конфиденциальность, точность и чёткие сроки — гарантируем. Персональный менеджер на каждом шаге.";
+export const HERO_CONF_RU =
+  "Опыт работы с нотариусами • Опыт на площадке АЭС «Аккую» • Поддержка 24/7";
 
 

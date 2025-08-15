@@ -43,7 +43,7 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* Renk paleti: Mavi (#1E40AF), Yeşil (#10B981), Gri (#6B7280) */
+/* Renk paleti: BNU Tercüme logosu (kahverengi/altın/bej) */
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -52,31 +52,31 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #10B981; /* emerald */
+  --primary: #6B3F2B; /* kahverengi */
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: #1E40AF; /* mavi (ikinci renk) */
+  --secondary: #D2A77A; /* sıcak altın/kum */
   --secondary-foreground: oklch(0.205 0 0);
-  --muted: #F3F4F6; /* açık gri */
-  --muted-foreground: #6B7280; /* gri metin */
-  --accent: #E5E7EB; /* gri vurgu */
+  --muted: #F3EEE7; /* bej arkaplan */
+  --muted-foreground: #6B5B4A; /* taupe metin */
+  --accent: #EAD9C8; /* bej vurgu */
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #E5E7EB;
-  --input: #E5E7EB;
-  --ring: #6EE7B7; /* açık yeşil */
-  --chart-1: #1E40AF;
-  --chart-2: #10B981;
-  --chart-3: #6B7280;
-  --chart-4: #60A5FA;
-  --chart-5: #34D399;
+  --border: #E7D7C6;
+  --input: #E7D7C6;
+  --ring: #E0C6A6; /* açık altın */
+  --chart-1: #6B3F2B;
+  --chart-2: #D2A77A;
+  --chart-3: #6B5B4A;
+  --chart-4: #8D6E5B;
+  --chart-5: #C9A98B;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #1E40AF;
+  --sidebar-primary: #6B3F2B;
   --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: #10B981;
+  --sidebar-accent: #D2A77A;
   --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: #E5E7EB;
-  --sidebar-ring: #93C5FD;
+  --sidebar-border: #E7D7C6;
+  --sidebar-ring: #E0C6A6;
 }
 
 .dark {
@@ -147,8 +147,8 @@
 .marquee { mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); overflow: hidden; }
 .marquee-track { display: flex; width: max-content; animation: marquee-left 28s linear infinite; }
 .blob { position: absolute; filter: blur(70px); opacity: .3; pointer-events: none; }
-.blob.blue { background: radial-gradient(600px 400px at center, #60A5FA55, transparent 60%); }
-.blob.green { background: radial-gradient(600px 400px at center, #34D39955, transparent 60%); }
+.blob.blue { background: radial-gradient(600px 400px at center, #D2A77A55, transparent 60%); }
+.blob.green { background: radial-gradient(600px 400px at center, #6B3F2B33, transparent 60%); }
 
 /* Fancy card styles */
 /* Text scroller styles */
@@ -196,7 +196,7 @@
   inset: 0;
   padding: 1px;
   border-radius: 16px;
-  background: linear-gradient(135deg, rgba(16,185,129,.45), rgba(30,64,175,.35));
+  background: linear-gradient(135deg, rgba(210,167,122,.55), rgba(107,63,43,.45));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -226,7 +226,7 @@
   content: "";
   position: absolute; inset: 0;
   border-radius: 16px;
-  border: 1px solid rgba(16,185,129,.10);
+  border: 1px solid rgba(107,63,43,.12);
   filter: blur(3px);
   pointer-events: none;
 }
@@ -238,8 +238,8 @@
   position: absolute;
   inset: 0; /* tam kenarlardan başla */
   background:
-    radial-gradient(1200px 800px at 5% 0%, rgba(16,185,129,0.10), transparent 60%),
-    radial-gradient(1100px 700px at 95% 10%, rgba(30,64,175,0.06), transparent 70%);
+    radial-gradient(1200px 800px at 5% 0%, rgba(210,167,122,0.18), transparent 60%),
+    radial-gradient(1100px 700px at 95% 10%, rgba(107,63,43,0.08), transparent 70%);
   filter: blur(18px);
   pointer-events: none;
   z-index: -1;

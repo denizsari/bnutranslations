@@ -2,14 +2,14 @@
 import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
 import { CV_URL } from "@/lib/constants";
 
-export default function CVPreviewButton() {
+export default function CVPreviewButton({ label }: { label?: string }) {
   const url = CV_URL;
   return (
     <Dialog>
       <DialogTrigger asChild>
         <button className="inline-flex items-center gap-2 rounded-xl border px-5 py-2.5 text-sm font-semibold transition hover:bg-gray-50">
           <span className="h-2 w-2 rounded-full bg-primary" />
-          Show CV
+          {label || 'Show CV'}
         </button>
       </DialogTrigger>
       <DialogContent>

@@ -26,7 +26,7 @@ export default function ServiceItemCard({ title, description, points, icon }: Pr
       <ul className="mt-4 grid gap-2 text-sm text-gray-700 sm:grid-cols-2">
         {points.map((p) => (
           <li key={p} className="flex items-start gap-2">
-            <span className="mt-2 inline-block h-1.5 w-1.5 flex-none rounded-full bg-primary shadow-[0_0_0_3px_rgba(16,185,129,0.1)]" />
+            <span className="mt-2 inline-block h-1.5 w-1.5 flex-none rounded-full bg-primary shadow-[0_0_0_3px_rgba(107,63,43,0.12)]" />
             <span>{p}</span>
           </li>
         ))}

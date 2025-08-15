@@ -66,11 +66,11 @@ export default function TypewriterTitle({
 
   return (
     <h1
-      className="break-words text-4xl font-black leading-tight md:text-6xl"
+      className="break-words text-3xl font-black leading-tight md:text-6xl"
       style={{ fontFamily: "var(--font-display)" }}
     >
       {base} 
-      <span className="relative inline-block align-middle md:align-baseline" style={reserveCh ? { minWidth: `${reserveCh}ch` } : undefined}>
+      <span className="relative block align-middle md:inline-block md:align-baseline md:ml-2 mt-1 md:mt-0" style={reserveCh ? { minWidth: `${reserveCh}ch` } : undefined}>
         <span className="text-primary">{typed}</span>
         <span className="ml-0.5 inline-block h-[1em] w-[2px] translate-y-[2px] animate-pulse bg-primary align-middle" />
       </span>

@@ -1,0 +1,53 @@
+{
+  "nav": { "home": "Home", "services": "Services", "credentials": "Credentials", "contact": "Contact" },
+  "cta": { "contact": "Contact", "showCv": "Show CV" },
+  "hero": {
+    "title": "BNU Tercüme. Translation that works for you.",
+    "desc": "BNU Tercüme — your trusted translation partner for visa/residency, work permits, legal and corporate matters. From request to final document: translation, editing, terminology check and final QA. Confidentiality, accuracy and clear deadlines — guaranteed. Personal expert support at every step.",
+    "conf": "Experience with notaries • On‑site experience at Akkuyu NPP • 24/7 support"
+  },
+  "process": {
+    "brief": {
+      "title": "Brief",
+      "desc": "Scope, files and deadline"
+    },
+    "quote": {
+      "title": "Quote", 
+      "desc": "Transparent pricing & ETA"
+    },
+    "translate": {
+      "title": "Translate",
+      "desc": "Terminology + QA review"
+    },
+    "deliver": {
+      "title": "Deliver",
+      "desc": "On-time handover"
+    }
+  },
+  "services": {
+    "notarialProcess": "Notarial Certification Process",
+    "documentTypes": "Document Types"
+  },
+  "credentials": {
+    "title": "Certifications & Education",
+    "certifications": {
+      "title": "Certifications",
+      "items": [
+        "ATA Certified Translator (EN↔TR)",
+        "SDL/Trados Advanced",
+        "ISO 17100: Translation Services"
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "items": [
+        "BA in Translation & Interpreting",
+        "MA in Linguistics (in progress)",
+        "Ongoing: Legal & Technical terminology workshops"
+      ]
+    }
+  },
+  "footer": { "privacy": "Privacy", "terms": "Terms", "rights": "All rights reserved." }
+}
+
+

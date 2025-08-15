@@ -10,40 +10,37 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["600", "700", "800"], var
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   title: {
-    default: "Profesyonel Çeviri Hizmetleri",
-    template: "%s | Profesyonel Çeviri Hizmetleri",
+    default: "BNU Tercüme — Profesyonel Çeviri",
+    template: "%s | BNU Tercüme",
   },
   description:
-    "Profesyonel çeviri hizmetleri: teknik, akademik, ticari ve edebi metinlerde uzman desteği. Türkçe-İngilizce başta olmak üzere çok dilli çözüm.",
+    "BNU Tercüme — vize–ikamet, çalışma izni, adli ve kurumsal işlemler için güvenilir çeviri ortağınız. Başvurudan hazır belgeye: çeviri, redaksiyon, terim kontrolü ve son kalite denetimi.",
   openGraph: {
     type: "website",
     locale: "tr_TR",
     url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
-    title: "Profesyonel Çeviri Hizmetleri",
+    title: "BNU Tercüme — Profesyonel Çeviri",
     description:
-      "Profesyonel çeviri hizmetleri: teknik, akademik, ticari ve edebi metinlerde uzman desteği.",
-    siteName: "Çevirmen",
+      "Vize–ikamet, çalışma izni, adli ve kurumsal işlemler için güvenilir çeviri ortağı.",
+    siteName: "BNU Tercüme",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Profesyonel Çeviri Hizmetleri",
+    title: "BNU Tercüme — Profesyonel Çeviri",
     description:
-      "Profesyonel çeviri hizmetleri: teknik, akademik, ticari ve edebi metinlerde uzman desteği.",
+      "Vize–ikamet, çalışma izni, adli ve kurumsal işlemler için güvenilir çeviri ortağı.",
   },
   icons: {
     icon: "/favicon.ico",
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // Ana layout artık yalnızca /[lang] altında kullanılıyor, burada boş döndürülür
   return (
     <html lang="tr">
-      <body className={`${roboto.variable} ${poppins.variable} antialiased bg-background text-foreground`}> 
-        <main className="min-h-screen">{children}</main>
+      <body className={`${roboto.variable} ${poppins.variable} antialiased bg-background text-foreground`}>
+        {children}
         <Toaster richColors />
         <Analytics />
       </body>
