@@ -53,7 +53,7 @@ export default function ProcessPlanning({ lang = "tr" }: { lang?: Locale }) {
       id: "initiation",
       title: t?.projectPlanning?.phases?.initiation?.title ?? "Project Initiation",
       icon: Target,
-      color: "from-red-500 to-orange-500",
+      color: "from-amber-500 to-orange-500",
       steps: t?.projectPlanning?.phases?.initiation?.steps ?? [
         "Define project goals",
         "Create a business case",
@@ -65,7 +65,7 @@ export default function ProcessPlanning({ lang = "tr" }: { lang?: Locale }) {
       id: "planning", 
       title: t?.projectPlanning?.phases?.planning?.title ?? "Project Planning",
       icon: PenTool,
-      color: "from-orange-500 to-yellow-500",
+      color: "from-orange-500 to-red-500",
       steps: t?.projectPlanning?.phases?.planning?.steps ?? [
         "Define scope",
         "Create a project plan",
@@ -78,7 +78,7 @@ export default function ProcessPlanning({ lang = "tr" }: { lang?: Locale }) {
       id: "execution",
       title: t?.projectPlanning?.phases?.execution?.title ?? "Project Execution", 
       icon: Cog,
-      color: "from-yellow-500 to-green-500",
+      color: "from-red-500 to-pink-500",
       steps: t?.projectPlanning?.phases?.execution?.steps ?? [
         "Allocate project resources",
         "Manage project team",
@@ -90,7 +90,7 @@ export default function ProcessPlanning({ lang = "tr" }: { lang?: Locale }) {
       id: "monitoring",
       title: t?.projectPlanning?.phases?.monitoring?.title ?? "Monitoring and Controlling",
       icon: TrendingUp,
-      color: "from-green-500 to-blue-500", 
+      color: "from-pink-500 to-purple-500", 
       steps: t?.projectPlanning?.phases?.monitoring?.steps ?? [
         "Track effort and cost",
         "Manage project schedule",
@@ -102,7 +102,7 @@ export default function ProcessPlanning({ lang = "tr" }: { lang?: Locale }) {
       id: "closing",
       title: t?.projectPlanning?.phases?.closing?.title ?? "Project Closing",
       icon: CheckCircle,
-      color: "from-blue-500 to-purple-500",
+      color: "from-purple-500 to-indigo-500",
       steps: t?.projectPlanning?.phases?.closing?.steps ?? [
         "Handover deliverables",
         "Release project team",
@@ -114,9 +114,9 @@ export default function ProcessPlanning({ lang = "tr" }: { lang?: Locale }) {
 
   return (
     <section className="py-20 bg-white relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50/50 to-white" />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-blue-100/20 to-purple-100/20 rounded-full blur-3xl" />
+      {/* Background Elements - Warmer tones inspired by the design */}
+      <div className="absolute inset-0 bg-gradient-to-br from-amber-50/30 to-orange-50/30" />
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-amber-100/20 to-orange-100/20 rounded-full blur-3xl" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -132,7 +132,7 @@ export default function ProcessPlanning({ lang = "tr" }: { lang?: Locale }) {
         {/* Process Flow */}
         <div className="relative">
           {/* Connection Lines */}
-          <div className="hidden lg:block absolute top-20 left-0 right-0 h-1 bg-gradient-to-r from-red-200 to-purple-200" />
+          <div className="hidden lg:block absolute top-20 left-0 right-0 h-1 bg-gradient-to-r from-amber-200 to-purple-200" />
           
           {/* Phase Cards */}
           <div className="grid lg:grid-cols-5 gap-8">
@@ -185,8 +185,10 @@ export default function ProcessPlanning({ lang = "tr" }: { lang?: Locale }) {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="inline-flex items-center gap-4 bg-gradient-to-r from-gray-900 to-gray-800 text-white px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
-            <span className="font-semibold">Start Your Project Today</span>
+          <div className="inline-flex items-center gap-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+            <span className="font-semibold">
+              {lang === 'tr' ? 'Projenizi Başlatalım' : lang === 'ru' ? 'Начнём проект сегодня' : 'Start Your Project Today'}
+            </span>
             <ArrowRight className="w-5 h-5" />
           </div>
         </div>
