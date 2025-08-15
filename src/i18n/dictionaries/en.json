@@ -2,9 +2,76 @@
   "nav": { "home": "Home", "services": "Services", "credentials": "Credentials", "contact": "Contact" },
   "cta": { "contact": "Contact", "showCv": "Show CV" },
   "hero": {
-    "title": "BNU Tercüme. Translation that works for you.",
+    "title": "Everything You Need to Translate",
+    "tagline": "Professional Translation Services",
+    "subtitle": "Professional translation services with certified expertise, delivering accurate and culturally adapted content for your global success.",
+    "cta": "LET'S DO IT",
+    "features": [
+      "Certified Translations",
+      "24/7 Support",
+      "Fast Delivery",
+      "Quality Guarantee"
+    ],
     "desc": "BNU Tercüme — your trusted translation partner for visa/residency, work permits, legal and corporate matters. From request to final document: translation, editing, terminology check and final QA. Confidentiality, accuracy and clear deadlines — guaranteed. Personal expert support at every step.",
     "conf": "Experience with notaries • On‑site experience at Akkuyu NPP • 24/7 support"
+  },
+  "stats": {
+    "projects": "Projects",
+    "languages": "Languages", 
+    "satisfaction": "Satisfaction",
+    "experience": "Experience"
+  },
+  "projectPlanning": {
+    "title": "Project Planning",
+    "subtitle": "A comprehensive approach to managing translation projects from inception to delivery, ensuring quality and timely completion.",
+    "phases": {
+      "initiation": {
+        "title": "Project Initiation",
+        "steps": [
+          "Define project goals",
+          "Create a business case",
+          "Complete the project charter",
+          "Crew up the list of stakeholders"
+        ]
+      },
+      "planning": {
+        "title": "Project Planning",
+        "steps": [
+          "Define scope",
+          "Create a project plan",
+          "Build budget",
+          "Deadline",
+          "Define roles and responsibilities"
+        ]
+      },
+      "execution": {
+        "title": "Project Execution",
+        "steps": [
+          "Allocate project resources",
+          "Manage project team",
+          "Build the product or service",
+          "Meet often and fix issues as they rise"
+        ]
+      },
+      "monitoring": {
+        "title": "Monitoring and Controlling",
+        "steps": [
+          "Track effort and cost",
+          "Manage project schedule",
+          "Ensure adherence to plan",
+          "Prevent any chance for disruptions"
+        ]
+      },
+      "closing": {
+        "title": "Project Closing",
+        "steps": [
+          "Handover deliverables",
+          "Release project team",
+          "Get project results approved",
+          "Document project learnings"
+        ]
+      }
+    }
   },
   "process": {
     "brief": {

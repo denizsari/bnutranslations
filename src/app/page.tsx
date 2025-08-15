@@ -1,3 +1,5 @@
+import ModernLayout from "@/components/site/ModernLayout";
+
 export default function Home() {
-  return null;
+  return <ModernLayout initialLang="tr" />;
 }

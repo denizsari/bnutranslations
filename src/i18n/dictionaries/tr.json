@@ -2,9 +2,76 @@
   "nav": { "home": "Anasayfa", "services": "Hizmetler", "credentials": "Yetkinlikler", "contact": "İletişim" },
   "cta": { "contact": "İletişim", "showCv": "CV'yi Göster" },
   "hero": {
-    "title": "BNU Tercüme. Sizin için çalışan çeviri.",
+    "title": "Her Şey Sizin İçin Burada Çeviri",
+    "tagline": "Profesyonel Çeviri Hizmetleri",
+    "subtitle": "Sertifikalı uzmanlık ile profesyonel çeviri hizmetleri, küresel başarınız için doğru ve kültürel olarak uyarlanmış içerik sunuyoruz.",
+    "cta": "HADI BAŞLAYALIM",
+    "features": [
+      "Sertifikalı Çeviriler",
+      "7/24 Destek", 
+      "Hızlı Teslimat",
+      "Kalite Garantisi"
+    ],
     "desc": "BNU Tercüme — vize–ikamet, çalışma izni, adli ve kurumsal işlemler için güvenilir çeviri ortağınız. Başvurudan hazır belgeye: çeviri, redaksiyon, terim kontrolü ve son kalite denetimi. Gizlilik, doğruluk ve net teslim tarihleri — güvencemizdir. Her adımda kişisel uzman desteği.",
     "conf": "Noterliklerle çalışma tecrübesi • Akkuyu NGS saha deneyimi • 7/24 destek"
+  },
+  "stats": {
+    "projects": "Projeler",
+    "languages": "Diller", 
+    "satisfaction": "Memnuniyet",
+    "experience": "Deneyim"
+  },
+  "projectPlanning": {
+    "title": "Proje Planlama",
+    "subtitle": "Başlangıçtan teslimat aşamasına kadar çeviri projelerini yönetmek için kapsamlı bir yaklaşım, kalite ve zamanında tamamlanmayı garanti eder.",
+    "phases": {
+      "initiation": {
+        "title": "Proje Başlatma",
+        "steps": [
+          "Proje hedeflerini tanımla",
+          "İş durumu oluştur",
+          "Proje sözleşmesini tamamla",
+          "Paydaş listesini hazırla"
+        ]
+      },
+      "planning": {
+        "title": "Proje Planlama",
+        "steps": [
+          "Kapsamı tanımla",
+          "Proje planı oluştur",
+          "Bütçe hazırla",
+          "Son tarih",
+          "Rol ve sorumlulukları tanımla"
+        ]
+      },
+      "execution": {
+        "title": "Proje Yürütme",
+        "steps": [
+          "Proje kaynaklarını tahsis et",
+          "Proje ekibini yönet",
+          "Ürün veya hizmet üret",
+          "Sık sık toplan ve sorunları çöz"
+        ]
+      },
+      "monitoring": {
+        "title": "İzleme ve Kontrol",
+        "steps": [
+          "Çaba ve maliyeti takip et",
+          "Proje programını yönet",
+          "Plana uyumu sağla",
+          "Kesintileri önle"
+        ]
+      },
+      "closing": {
+        "title": "Proje Kapanış",
+        "steps": [
+          "Çıktıları teslim et",
+          "Proje ekibini serbest bırak",
+          "Proje sonuçlarını onayla",
+          "Proje öğrenimlerini belgele"
+        ]
+      }
+    }
   },
   "process": {
     "brief": {
