@@ -10,28 +10,50 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["600", "700", "800"], var
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   title: {
-    default: "BNU Tercüme — Profesyonel Çeviri",
+    default: "BNU Tercüme — Profesyonel Çeviri ve Noter Tasdik Hizmetleri",
     template: "%s | BNU Tercüme",
   },
-  description:
-    "BNU Tercüme — vize–ikamet, çalışma izni, adli ve kurumsal işlemler için güvenilir çeviri ortağınız. Başvurudan hazır belgeye: çeviri, redaksiyon, terim kontrolü ve son kalite denetimi.",
+  description: "Profesyonel çeviri ve noter tasdik hizmetleri. Vize, ikamet, çalışma izni, adli ve kurumsal işlemler için uzman desteği. 7/24 hızlı ve güvenilir hizmet.",
+  keywords: "çeviri, tercüme, noter tasdik, profesyonel çeviri, vize çevirisi, belge çevirisi, yeminli tercüman, sertifikalı çeviri",
   openGraph: {
     type: "website",
     locale: "tr_TR",
     url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
-    title: "BNU Tercüme — Profesyonel Çeviri",
-    description:
-      "Vize–ikamet, çalışma izni, adli ve kurumsal işlemler için güvenilir çeviri ortağı.",
+    title: "BNU Tercüme — Profesyonel Çeviri ve Noter Tasdik Hizmetleri",
+    description: "Profesyonel çeviri ve noter tasdik hizmetleri. Vize, ikamet, çalışma izni, adli ve kurumsal işlemler için uzman desteği.",
     siteName: "BNU Tercüme",
+    images: [
+      {
+        url: '/bnu-logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'BNU Tercüme Logo',
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "BNU Tercüme — Profesyonel Çeviri",
-    description:
-      "Vize–ikamet, çalışma izni, adli ve kurumsal işlemler için güvenilir çeviri ortağı.",
+    description: "Profesyonel çeviri ve noter tasdik hizmetleri. 7/24 hızlı ve güvenilir hizmet.",
+    images: ['/bnu-logo.png'],
   },
-  icons: {
-    icon: "/favicon.ico",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    languages: {
+      'tr': '/',
+      'en': '/en',
+      'ru': '/ru',
+    },
   },
 };
 
