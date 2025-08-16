@@ -50,89 +50,89 @@ export default function ProcessPlanning({ lang = "tr" }: { lang?: Locale }) {
 
   const phases = [
     {
-      id: "initiation",
-      title: t?.projectPlanning?.phases?.initiation?.title ?? "Project Initiation",
+      id: "consultation",
+      title: t?.projectPlanning?.phases?.initiation?.title ?? "İlk Görüşme ve Analiz",
       icon: Target,
-      color: "from-amber-500 to-orange-500",
+      color: "from-slate-700 to-slate-800",
       steps: t?.projectPlanning?.phases?.initiation?.steps ?? [
-        "Define project goals",
-        "Create a business case",
-        "Complete the project charter",
-        "Crew up the list of stakeholders"
+        "Belge türü ve içeriği analizi",
+        "Dil çifti ve zorluk seviyesi belirleme",
+        "Süre ve fiyat teklifi hazırlama",
+        "Özel gereksinimler değerlendirmesi"
       ]
     },
     {
-      id: "planning", 
-      title: t?.projectPlanning?.phases?.planning?.title ?? "Project Planning",
+      id: "preparation", 
+      title: t?.projectPlanning?.phases?.planning?.title ?? "Çeviri Hazırlığı",
       icon: PenTool,
-      color: "from-orange-500 to-red-500",
+      color: "from-slate-600 to-slate-700",
       steps: t?.projectPlanning?.phases?.planning?.steps ?? [
-        "Define scope",
-        "Create a project plan",
-        "Build budget",
-        "Deadline",
-        "Define roles and responsibilities"
+        "Terminoloji araştırması",
+        "Referans kaynak toplama",
+        "Çeviri araçları hazırlığı",
+        "Zaman planlaması",
+        "Kalite kontrol listesi oluşturma"
       ]
     },
     {
-      id: "execution",
-      title: t?.projectPlanning?.phases?.execution?.title ?? "Project Execution", 
+      id: "translation",
+      title: t?.projectPlanning?.phases?.execution?.title ?? "Çeviri Süreci", 
       icon: Cog,
-      color: "from-red-500 to-pink-500",
+      color: "from-blue-600 to-blue-700",
       steps: t?.projectPlanning?.phases?.execution?.steps ?? [
-        "Allocate project resources",
-        "Manage project team",
-        "Build the product or service",
-        "Meet often and fix issues as they rise"
+        "Profesyonel çeviri yapımı",
+        "Terminoloji tutarlılığı kontrolü",
+        "Kültürel uyarlama",
+        "İlk düzeltme ve revizyon"
       ]
     },
     {
-      id: "monitoring",
-      title: t?.projectPlanning?.phases?.monitoring?.title ?? "Monitoring and Controlling",
+      id: "review",
+      title: t?.projectPlanning?.phases?.monitoring?.title ?? "Kalite Kontrol ve Düzeltme",
       icon: TrendingUp,
-      color: "from-pink-500 to-purple-500", 
+      color: "from-blue-500 to-blue-600", 
       steps: t?.projectPlanning?.phases?.monitoring?.steps ?? [
-        "Track effort and cost",
-        "Manage project schedule",
-        "Ensure adherence to plan",
-        "Prevent any chance for disruptions"
+        "Çeviri kalitesi değerlendirmesi",
+        "Dil bilgisi ve yazım denetimi",
+        "Anlam ve akıcılık kontrolü",
+        "Son düzeltmeler"
       ]
     },
     {
-      id: "closing",
-      title: t?.projectPlanning?.phases?.closing?.title ?? "Project Closing",
+      id: "delivery",
+      title: t?.projectPlanning?.phases?.closing?.title ?? "Teslimat ve Son Aşama",
       icon: CheckCircle,
-      color: "from-purple-500 to-indigo-500",
+      color: "from-slate-600 to-blue-600",
       steps: t?.projectPlanning?.phases?.closing?.steps ?? [
-        "Handover deliverables",
-        "Release project team",
-        "Get project results approved",
-        "Document project learnings"
+        "Final çeviri teslimi",
+        "Noter tasdik sürecine başlama",
+        "Müşteri onayı alınması",
+        "Arşivleme ve dökümentasyon"
       ]
     }
   ];
 
   return (
     <section className="py-20 bg-white relative overflow-hidden">
-      {/* Background Elements - Warmer tones inspired by the design */}
-      <div className="absolute inset-0 bg-gradient-to-br from-amber-50/30 to-orange-50/30" />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-amber-100/20 to-orange-100/20 rounded-full blur-3xl" />
+      {/* Background Elements - Professional tones */}
+      <div className="absolute inset-0 bg-gradient-to-br from-stone-50/30 to-amber-50/30" />
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-stone-100/20 to-amber-100/20 rounded-full blur-3xl" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            {t?.projectPlanning?.title ?? "Project Planning"}
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-4">
+            {t?.projectPlanning?.title ?? "Çeviri Sürecimiz"}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {t?.projectPlanning?.subtitle ?? "A comprehensive approach to managing translation projects from inception to delivery, ensuring quality and timely completion."}
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            {t?.projectPlanning?.subtitle ?? "Profesyonel çeviri hizmetimizin her aşamasında kalite ve güvenilirlik ön plandadır."}
           </p>
         </div>
 
         {/* Process Flow */}
         <div className="relative">
           {/* Connection Lines */}
-          <div className="hidden lg:block absolute top-20 left-0 right-0 h-1 bg-gradient-to-r from-amber-200 to-purple-200" />
+          <div className="hidden lg:block absolute top-20 left-0 right-0 h-1 bg-gradient-to-r from-slate-200 to-blue-200" />
           
           {/* Phase Cards */}
           <div className="grid lg:grid-cols-5 gap-8">
@@ -157,15 +157,15 @@ export default function ProcessPlanning({ lang = "tr" }: { lang?: Locale }) {
                       <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${phase.color} flex items-center justify-center`}>
                         <Icon className="w-5 h-5 text-white" />
                       </div>
-                      <h3 className="font-semibold text-gray-900 text-sm leading-tight">{phase.title}</h3>
+                      <h3 className="font-semibold text-slate-900 text-sm leading-tight">{phase.title}</h3>
                     </div>
 
                     {/* Steps */}
                     <ul className="space-y-3">
                       {phase.steps.map((step, stepIndex) => (
-                        <li key={stepIndex} className="flex items-start gap-3 text-sm text-gray-600">
-                          <div className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 flex-shrink-0" />
-                          <span className="group-hover:text-gray-900 transition-colors">{step}</span>
+                        <li key={stepIndex} className="flex items-start gap-3 text-sm text-slate-600">
+                          <div className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0" />
+                          <span className="group-hover:text-slate-900 transition-colors">{step}</span>
                         </li>
                       ))}
                     </ul>
@@ -173,7 +173,7 @@ export default function ProcessPlanning({ lang = "tr" }: { lang?: Locale }) {
                     {/* Arrow for mobile */}
                     {index < phases.length - 1 && (
                       <div className="lg:hidden flex justify-center mt-6">
-                        <ArrowRight className="w-6 h-6 text-gray-300" />
+                        <ArrowRight className="w-6 h-6 text-slate-300" />
                       </div>
                     )}
                   </div>
@@ -185,9 +185,9 @@ export default function ProcessPlanning({ lang = "tr" }: { lang?: Locale }) {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="inline-flex items-center gap-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+          <div className="inline-flex items-center gap-4 bg-slate-800 text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
             <span className="font-semibold">
-              {lang === 'tr' ? 'Projenizi Başlatalım' : lang === 'ru' ? 'Начнём проект сегодня' : 'Start Your Project Today'}
+              {lang === 'tr' ? 'Çeviri Projenizi Başlatalım' : lang === 'ru' ? 'Начнём ваш переводческий проект' : 'Start Your Translation Project'}
             </span>
             <ArrowRight className="w-5 h-5" />
           </div>

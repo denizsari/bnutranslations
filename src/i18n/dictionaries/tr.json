@@ -2,10 +2,10 @@
   "nav": { "home": "Anasayfa", "services": "Hizmetler", "credentials": "Yetkinlikler", "contact": "İletişim" },
   "cta": { "contact": "İletişim", "showCv": "CV'yi Göster" },
   "hero": {
-    "title": "Her Şey Sizin İçin Burada Çeviri",
-    "tagline": "Profesyonel Çeviri Hizmetleri",
+    "title": "Profesyonel Çeviri ve Noter Tasdik",
+    "tagline": "Uzman Tercüman Hizmetleri",
     "subtitle": "Sertifikalı uzmanlık ile profesyonel çeviri hizmetleri, küresel başarınız için doğru ve kültürel olarak uyarlanmış içerik sunuyoruz.",
-    "cta": "HADI BAŞLAYALIM",
+    "cta": "HEMEN BAŞLAYALIM",
     "features": [
       "Sertifikalı Çeviriler",
       "7/24 Destek", 

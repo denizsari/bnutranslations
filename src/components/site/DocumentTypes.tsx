@@ -40,26 +40,41 @@ export default function DocumentTypes({ lang = "tr" }: { lang?: "tr" | "ru" | "e
   const documents = documentData[currentLang];
 
   return (
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {Object.entries(documents).map(([key, category]) => {
+    <div className="grid gap-4 sm:grid-cols-2">
+      {Object.entries(documents).slice(0, 4).map(([key, category]) => {
         const IconComponent = categoryIcons[key] || FileText;
         
         return (
-          <div key={key} className="gradient-border glass-card relative p-5">
-            <div className="card-blob opacity-30" />
-            <div className="flex items-center gap-3 mb-4">
-              <div className="flex-shrink-0 p-2 rounded-lg bg-primary/10">
-                <IconComponent className="h-5 w-5 text-primary" />
+          <div 
+            key={key} 
+            className="bg-white rounded-xl p-4 border border-stone-100 hover:border-stone-200 transition-all duration-200 hover:shadow-md group"
+          >
+            {/* Header */}
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-8 h-8 bg-stone-100 rounded-lg flex items-center justify-center group-hover:bg-stone-200 transition-colors duration-200">
+                <IconComponent className="w-4 h-4 text-stone-600" />
               </div>
-              <h4 className="font-semibold text-sm">{category.title}</h4>
+              <h3 className="font-semibold text-stone-800 text-sm">
+                {category.title}
+              </h3>
             </div>
+
+            {/* Items */}
             <ul className="space-y-2">
-              {category.items.map((item, index) => (
-                <li key={index} className="flex items-start gap-2 text-sm text-gray-700">
-                  <span className="mt-2 inline-block h-1 w-1 flex-none rounded-full bg-primary/60" />
-                  <span>{item}</span>
+              {category.items.slice(0, 3).map((item, index) => (
+                <li 
+                  key={index} 
+                  className="flex items-start gap-2 text-xs text-stone-600"
+                >
+                  <div className="w-1 h-1 rounded-full bg-stone-400 mt-1.5 flex-shrink-0" />
+                  <span className="leading-relaxed">{item}</span>
                 </li>
               ))}
+              {category.items.length > 3 && (
+                <li className="text-xs text-stone-500 font-medium">
+                  +{category.items.length - 3} {lang === 'tr' ? 'daha' : lang === 'ru' ? 'ещё' : 'more'}
+                </li>
+              )}
             </ul>
           </div>
         );

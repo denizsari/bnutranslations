@@ -2,10 +2,10 @@
   "nav": { "home": "Home", "services": "Services", "credentials": "Credentials", "contact": "Contact" },
   "cta": { "contact": "Contact", "showCv": "Show CV" },
   "hero": {
-    "title": "Everything You Need to Translate",
-    "tagline": "Professional Translation Services",
+    "title": "Professional Translation & Notarization",
+    "tagline": "Expert Interpreter Services",
     "subtitle": "Professional translation services with certified expertise, delivering accurate and culturally adapted content for your global success.",
-    "cta": "LET'S DO IT",
+    "cta": "GET STARTED NOW",
     "features": [
       "Certified Translations",
       "24/7 Support",
